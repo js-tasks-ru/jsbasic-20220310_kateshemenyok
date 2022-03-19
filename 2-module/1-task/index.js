@@ -1,3 +1,5 @@
 function sumSalary(salaries) {
-  // ваш код...
+  return Object.values(salaries).reduce((acc, cur) => {
+    return isFinite(cur) ? (acc += cur) : acc;
+  }, 0);
 }
